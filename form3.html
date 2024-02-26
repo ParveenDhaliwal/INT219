@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv ="X-UA-Compitable" content="IE=edge">
+        <title></title>  
+        <link rel="stylesheet" href="style.css">  
+       
+    </head>
+    <body>
+        <div class="form-container">
+                <h2>REGISTRATION FORM</h2>
+            <form  id="form" onsubmit=" return validateform()">
+                <label>Username</label><span class="error" id="userError"></span><br>
+                <input type="text" name="" id="username" placeholder="Enter your full name" required><br>
+               
+                <label>Email</label><span class="error" id="emailError"></span><br>
+                <input type="email" name="" id="email" placeholder="Enter your email" required><br>
+            
+                <label>Phone</label><span class="error" id="phoneError"></span><br>
+                <input type="text" name="" id="phone" placeholder="Enter your mobile no."><br>
+               
+
+                <label>Password</label><span class ="error" id="passwordError"></span><br>
+                <input type="password" name="" id="password" placeholder="Enter your Password"><br>
+                
+                <label>Confirm Password</label><span class ="error" id="cpasswordError"></span><br>
+                <input type="password" name="" id="cpassword" placeholder="Enter your password again"><br>
+                
+
+                <input type="submit" value="Submit" name="">
+            </form>
+        </div> 
+        <script>
+            var username = document.getElementById("username");
+            var email = document.getElementById("email");
+            var phone = document.getElementById("phone");
+            var password = document.getElementById("password");
+            var cpassword = document.getElementById("cpassword");
+
+
+
+            function validateform(){
+
+                var flag=1;
+                var onlyCharacters = /^[a-zA-Z]+$/;
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                // Regular expression to check if the input is in the format "xxx-xxx-xxxx"
+                var mobileRegex = /^\d{3}-\d{3}-\d{4}$/;
+
+                 // Regular expression to check password
+                var minLength = 8;
+                var containsUppercase = /[A-Z]/;
+                var containsLowercase = /[a-z]/;
+                var containsNumber = /\d/;
+                //Username validation
+                if(username.value==""){
+                    document.getElementById("userError").innerHTML="Username can`t be blank";
+                    return false;
+                }
+                else if(username.value.length<3||username.value.length>20){
+                    document.getElementById("userError").innerHTML="Min 3 and Max 20characters are required";
+                    return false;
+                } 
+               
+                else if (!onlyCharacters.test(username.value)){
+                    document.getElementById("userError").innerHTML="Only characters are accepted";
+                    return false;
+                }
+
+                 //email validation 
+                
+                if(email.value==""){
+                    document.getElementById("emailError").innerHTML="Email can`t be blank";
+                    return false;
+                }
+               
+                // Check if the input is empty or not a valid email address
+                 else if (!emailRegex.test(email.value)) {
+                    document.getElementById('emailError').innerHTML = 'Invalid email format';
+                    return false;
+                } 
+
+               // phone no validation 
+                else if(phone.value==""){
+                    document.getElementById("phoneError").innerHTML="Phone no. is required";
+                    return false;
+                }
+                // else if (phone.value(isNan)){
+                //     document.getElementById("phoneError").innerHTML="invalid input only numbers are accepted";
+                //     return false;
+                // }
+                else if (!mobileRegex.test(phone.value)) {
+                    document.getElementById('phoneError').textContent = 'Invalid mobile number format';
+                    return false;
+                } 
+                //password validation
+                if (password.value.length < minLength) {
+                    document.getElementById('passwordError').innerHTML = 'Password must be at least ' + minLength + ' characters long';
+                    return false;
+                } 
+                else if (!containsUppercase.test(password.value) || !containsLowercase.test(password.value) || !containsNumber.test(password.value)) {
+                    document.getElementById('passwordError').innerHTML = 'Password must contain at least one uppercase letter, one lowercase letter, and one number';
+                    return false;
+                }
+                else if(cpassword.value==""){
+                    document.getElementById('cpasswordError').innerHTML = 'Must be filled ' ;
+                    return false;
+                }
+                else if(cpassword.value!=password.value){
+                    document.getElementById('cpasswordError').innerHTML = 'Must match with password ' ;
+                    return false;
+                }
+            
+                else{
+                    return true;
+                }
+    }
+
+        </script>   
+     </body>
+</html>

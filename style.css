@@ -1,0 +1,39 @@
+body{
+    background-color: bisque;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+.form-container{
+    background-color: white;
+    padding: 10px;
+   
+}
+h2{
+    margin: 0px 0px 10px 0px;
+    text-align: center;
+    background: linear-gradient(rgb(0, 64, 255), rgb(90, 128, 0));
+    background: -o-linear-gradient(rgb(161, 130, 120), rgb(128, 0, 100));
+}
+
+
+input{
+    width: 300px;
+    margin: 0px 0px 10px 0px;
+    padding: 10px;
+   
+}
+input[type="submit"]{
+    width: 325px;
+    border: 0px;
+    color: white;
+    background: -o-linear-gradient(rgb(0, 0, 255), rgb(0, 109, 128));
+    background: linear-gradient(rgb(0, 64, 255), rgb(90, 128, 0));
+   
+}
+
+.error{
+    margin-left:20px;
+    color: red;
+}

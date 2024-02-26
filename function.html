@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    </head>
+    <body>
+
+    <!-- Simple function -->
+    <p>Simple Function</p>
+    <button onclick="simfun()">Simple function call</button>
+    <p id="sp"></p>
+
+
+    <!-- Function with Arguments -->
+    <form>  
+        <p>Alert will print cube of 4 is displayed when you click below</p>
+        <input type="button" value="click" onclick="getcube(4)"/> <br><br> 
+    </form>  
+   
+    </body>
+    
+    <script>
+        function simfun(){
+            document.getElementById("sp").innerHTML="Hello how are you?";
+        }
+
+        function getcube(number){  
+            alert(number*number*number);  
+        }  
+
+        function retfun(){  
+        return "hello! How are you?";  
+        }  
+    </script>
+     <!-- Function with Return Value -->
+    <script>
+        document.write(retfun()+"<br>"+"<br>");  
+    </script>
+
+    <!-- function methods 
+        apply()	It is used to call a function contains this value and a single array of arguments.
+        bind()	It is used to create a new function.
+        call()	It is used to call a function contains this value and an argument list.
+        toString()	It returns the result in a form of a string. -->
+        
+        
+        <!-- apply 
+
+        syntax function.apply(thisArg, [array])
+
+        Parameter
+        thisArg - It is optional. The this value is given for the call to a function.
+        array - It is optional. It is an array-like object.
+
+        Return Value
+        It returns the result of the calling function along provided this value and arguments.   -->
+        <script>  
+            var arr = [7, 5, 9, 1];  
+            var max = Math.max.apply(null, arr);  
+            document.writeln(max);  
+        </script>
+        <script>  
+            var array = [1,2,3,4];  
+            var newarray=[5,6,7,8]  
+            array.push.apply(array, newarray);  
+            document.writeln(array);  
+</script>   
+<!-- recursive function -->
+<script>
+    function countDown(fromNumber) {
+    console.log(fromNumber);
+
+    let nextNumber = fromNumber - 1;
+
+    if (nextNumber > 0) {
+        countDown(nextNumber);
+    }
+}
+countDown(3);
+</script>
+</html>

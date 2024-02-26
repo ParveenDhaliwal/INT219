@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <body>
+    <button class="start">START</button>
+    <button class="stop">STOP</button>
+    <h2></h2>
+    <script>
+        const start = document.querySelector('.start')
+        const stop = document.querySelector('.stop')
+        const h2 = document.querySelector('h2');
+        let interval;
+        start.addEventListener('click', () => {
+            interval = setInterval(() => {
+                const now = new Date();
+
+                h2.textContent = `${now.getHours()}h: ${now.getMinutes()}m : ${now.getSeconds()}s : ${now.getMilliseconds()}ms`;
+               
+            },1000)
+        })
+    
+        stop.addEventListener('click', () => {
+            clearInterval(interval);
+        })
+
+    </script>
+    </body>
+</html>

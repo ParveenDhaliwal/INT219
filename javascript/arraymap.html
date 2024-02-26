@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+        
+    </head>
+    <body>
+        <script>
+            let arr=[1,2,3,4,5,6];
+            let arr2= new Array(7,8,9);
+            for(let i=0;i<arr.length;i++){
+                document.write(arr[i]);
+            }
+for(let i=0;i<arr2.length;i++){
+    document.write(arr2[i]);
+};
+        arr.forEach((elem) => {
+            document.write(elem);
+            document.write("<br />")
+        })
+        for(let key in arr){
+            console.log(arr[key]);
+
+        }
+
+        for(let k of arr) {
+            console.log(k);
+        }
+
+        document.write(arr.length+"<br>");
+       // document.write(Size0f(arr));
+       let temp = arr.map((value)=>{
+        return value*2;
+       })
+       temp.forEach((i)=>{
+        document.write(i +"<br>");
+       })
+
+
+
+
+
+
+
+
+            // let arr=[1,2,3,4];
+            // arr.map(el => {
+            //     console.log(el*2);
+            // });
+            // console.log(arr.length);
+        //    const person={
+        //     firstname:"john",
+        //     lastname:"doe",
+            // get lang(){
+            //     return this.firstname;
+            // },
+            // set setData(value){
+            //     this.firstname = value;
+            // }
+        //    };
+        //    console.log(person.lang)
+
+        //    person.setData="Hello";
+        //    console.log(person.lang)
+        // const Person={
+        //     Name:"Ram",
+        //     Class:"INT219",
+        //     Rollno:2,
+        //     greet:function(){document.write("My name is "+ this.Name);},
+        //     get lang(){
+        //         return this.Class;
+        // }
+
+        // }
+        // document.write(Person.lang);
+        // document.write("Class is " + Person.Class +"<br>");
+        // document.write("Roll no is " + Person["Rollno"]+"<br>");
+        // Person.greet();
+        // Person.Mobile=123456788;
+        // document.write("Mobile no is " + Person.Mobile+"<br>");
+        // delete Person.Rollno;
+        // document.write("Roll no is " + Person["Rollno"]+"<br>");
+        
+        
+
+        // console.log(Person.lang());
+
+
+        // const obj = {
+        //     _name: "Ram",
+        //     set name(newName){
+        //                 this._name = newName;    
+        //             }
+        // }
+        
+        // let student = new student("Shyam");
+        
+        // document.write(name);
+        // obj.name = "ABC";
+        // document.write(obj._name);
+
+        </script>
+    </body>
+</html>

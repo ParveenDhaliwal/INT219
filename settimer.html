@@ -1,0 +1,52 @@
+<!-- setTimeout(function, milliseconds)
+Executes a function, after waiting a specified number of milliseconds.
+
+setInterval(function, milliseconds)
+Same as setTimeout(), but repeats the execution of the function continuously. 
+clearTimeout() method stops the execution of the function specified in setTimeout().
+clearInterval() method stops the execution of the function specified in setInterval().
+
+-->
+<html>
+    <head>
+       
+    </head>
+    <body>
+        
+        <h3> This is an example of using the setTimeout() method </h3>
+        <p> Here, an alert dialog box will display after two seconds. </p>
+
+        <script>
+
+        var a;
+
+        a = setTimeout(fun, 2000);
+
+        function fun() {
+        alert(" Hello How are you?  ");
+        }
+        </script>
+         <!-- Example of setInterval() -->
+        <h3> This is the example of setInterval() method</h3>
+        <p>Here counter value will be increment from 0 to 5 and then stop</p>
+        <p id="p1"></p>
+        <script>
+        let counter = 0, c=5;
+        const intervalId = setInterval(function() { 
+            if(counter<=c){
+            document.getElementById('p1').innerHTML="Counter value is:"+counter;
+            counter++;
+            }
+            if (counter === 4) {
+                clearInterval(intervalId); // Stop the interval after counter reaches 5
+            }
+             }, 1000); // Execute every 1000 milliseconds = 1 second
+        </script>
+
+
+       
+
+    </body>
+
+
+</html>

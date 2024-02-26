@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <button onclick="start()">start</button>
+        <button onclick="stop()">stop</button>
+        <p id="demo"></p>
+
+        <script>
+        var i;
+        function start()
+        {
+        i = setInterval(datetime,1000);
+        }
+
+        function datetime()
+        {
+        document.getElementById("demo").innerHTML = new Date();
+        // document.getElementById("demo").style.fontSize = "20px";
+        // document.getElementById("demo").style.color = "cadetblue";
+        // document.getElementById("demo").style.fontStyle="italic";
+        // document.getElementById("demo").style.cssText = "font-size: 70px; color:blue; font-style:italic";
+        }
+
+        function stop()
+        {
+        clearInterval(i);
+        }
+
+        </script>
+    </body>
+</html>

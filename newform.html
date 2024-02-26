@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: bisque;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            height:100vh;
+        }
+        .form-container{
+            background-color: white;
+            padding:20px;
+           
+        }
+        h2{
+            margin: 0px 0px 10px 0px;
+            text-align: center;
+        }
+        
+        input{
+            width: 200px;
+            margin: 10px 0px;
+            padding: 10px;
+        }
+        input[type="submit"]{
+            width: 222px;
+            background-color: blue;
+            border: 0px;
+            color: white;
+        }
+        .error{
+            margin-left:20px;
+            color: red;
+        }
+        </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Login</h2>
+        <form action="" onsubmit=" return validation()">
+                <label>Name</label><span class="error" id="userError"></span><br>
+                <input type="text" name="username" id="username"><br>
+                
+                <input type="submit" >
+        </form>
+    </div>
+    <script>
+        function validation(){
+            let a =document.getElementById("username").value;
+            if(a==""){
+                //alert("No input is given");
+                document.getElementById("userError").innerHTML="* Input is not given";
+                return false;
+            }
+            else if((a.length)<3){
+                document.getElementById("userError").innerHTML="* Min 3 characters are required";
+                return false;
+            }
+            else if(!(a.match(/^[A-Za-z]+$/))){
+                document.getElementById("userError").innerHTML="* Invalid input type";
+                return false;
+            }
+           else{
+                return true;
+            }
+        }
+
+
+
+
+
+
+
+        // let a= document.getElementById("username").value;
+        // function validation(){
+        //     let a= document.getElementById("username").value;
+        //     if(a==""){
+        //         //alert("No input is given");
+        //         document.getElementById("userError").innerHTML=" * Input is required";
+        //         return false;
+        //     }
+        //     else if(a.length<3){
+        //         document.getElementById("userError").innerHTML=" * Min 3 characters are required";
+        //         return false;
+        //     }
+        //     else if(typeof(a==Number)){
+        //         document.getElementById("userError").innerHTML=" * Min 3 characters are required";
+        //         return false;
+        //     }
+        //     else{
+        //         return true;
+        //     }
+        // }
+    </script>
+    
+   
+</body>
+</html>

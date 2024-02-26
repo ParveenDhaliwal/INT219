@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv ="X-UA-Compitable" content="IE=edge">
+        <title></title>  
+        <link rel="stylesheet" href="style.css">  
+       
+    </head>
+    <body>
+        <div class="form-container">
+                <h2>REGISTRATION FORM</h2>
+            <form  id="form" onsubmit=" return validateform()">
+                <label>Username</label><span class="error" id="userError"></span><br>
+                <input type="text" name="" id="username" placeholder="Enter your full name"><br>
+               
+                <label>Email</label><span></span><br>
+                <input type="email" name="" id="email" placeholder="Enter your email"><br>
+            
+                <label>Phone</label><span></span><br>
+                <input type="number" name="" id="phone" placeholder="Enter your mobile no."><br>
+               
+
+                <label>Password</label><span class ="error" id="passError"></span><br>
+                <input type="password" name="" id="password" placeholder="Enter your Password"><br>
+                
+                <label>Confirm Password</label><span></span><br>
+                <input type="password" name="" id="cpassword" placeholder="Enter your password again"><br>
+                
+
+                <input type="submit" value="Submit" name="">
+            </form>
+        </div> 
+        <script>
+            var username = document.getElementById("username");
+var email = document.getElementById("email");
+var phone = document.getElementById("phone");
+var password = document.getElementById("password");
+var cpassword = document.getElementById("cpassword");
+
+function validateform(){
+
+    var cname = /^[A-Za-z]+$/;
+   
+    if(username.value.trim()==""){
+        document.getElementById("userError").innerHTML="User name can`t be blank";
+        username.style.border="solid 3px red";
+        return false;
+    }
+    else if(username.value.length<3){
+        document.getElementById("userError").innerHTML="User name min 3 characters required";
+        username.style.border="solid 3px yellow";
+        return false;
+    }
+    else if(username.value.length>20){
+        document.getElementById("userError").innerHTML="User name max 20 characters accepted";
+        username.style.border="solid 3px Orange";
+        return false;
+    }
+    // else if(username.value.match(cname)){
+    //     return true;
+    // }
+    // else{
+    //     document.getElementById("userError").innerHTML="Only character input is accepted";
+    //     username.style.border="solid 3px Orange";
+    //     return false;
+        
+    // }
+    if(password.value.trim()==""){
+        document.getElementById("passError").innerHTML="Password can`t be blank";
+        return false;
+    }
+    else if(password.value.trim().length<5){
+        document.getElementById("passError").innerHTML="Password too short";
+        return false;
+    }
+    else{
+        return true;
+    }
+}
+        </script>   
+     </body>
+</html>

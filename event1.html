@@ -1,0 +1,111 @@
+<!-- The change in the state of an object is known as an Event. 
+In html, there are various events which represents that 
+some activity is performed by the user or by the browser.
+When javascript code is included in HTML, 
+js react over these events and allow the execution.
+This process of reacting over the events is called Event Handling. 
+Thus, js handles the HTML events via Event Handlers. -->
+
+<!-- Mouse events
+Event Performed	 Event Handler	 Description
+click	         onclick	     When mouse click on an element
+mouseover	     onmouseover	 When the cursor of the mouse comes over the element
+mouseout	     onmouseout	     When the cursor of the mouse leaves an element
+mousedown	     onmousedown	 When the mouse button is pressed over the element
+mouseup	         onmouseup	     When the mouse button is released over the element
+mousemove	     onmousemove	 When the mouse movement takes place. -->
+
+
+<!-- Keyboard events:
+Event Performed    	   Event Handler	        Description
+Keydown & Keyup	       onkeydown & onkeyup  	When the user press and then release the key -->
+
+<!-- Form events:
+Event Performed	  Event Handler  	Description
+focus	          onfocus         	When the user focuses on an element
+submit	          onsubmit	        When the user submits the form
+blur	          onblur	        When the focus is away from a form element
+change	          nchange	        When the user modifies or changes the value of a form element -->
+
+
+<!-- Window/Document events
+Event Performed	   Event Handler	Description
+load	           onload	        When the browser finishes the loading of the page
+unload	           onunload	        When the visitor leaves the current webpage, the browser unloads it
+resize	           onresize	        When the visitor resizes the window of the browser -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    </head>
+    <body>
+        
+        <script language="Javascript" type="text/Javascript">  
+
+            // click event 
+            function clickevent()  
+            {  
+                document.write("I am good");  
+            }  
+            // mouseoverevent
+            function mouseoverevent()  
+            {  
+                alert("Hello");  
+            } 
+            // mouseoutevent
+            function mouseoutevent()  
+            {  
+                alert("How are you?");  
+            } 
+            
+            //onfocusevent
+	        function focusevent()
+	        {
+		        document.getElementById("input1").style.background=" aqua";
+	        }
+
+            //keydown event
+            function keydownevent()
+	        {
+		        document.getElementById("input1");
+		        alert("Pressed a key");
+	        }
+            
+            //onload event
+            document.write("The page is loaded successfully");  
+    
+
+    
+       
+
+        </script>  
+        <form>  
+        <p>Example of on click event</p>
+        <input type="button" onclick="clickevent()" value="how are you?"/>  
+        </form>  
+        <p>Example of mouseover event</p>
+        <p onmouseover="mouseoverevent()"> Keep cursor over me</p>  
+
+        <p>Example of onfocus event</p>
+        <h2> Enter something here</h2>
+        <input type="text" id="input1" onfocus="focusevent()"/>
+
+        <!-- <p>Example of mouseover event</p>
+        <p onmouseout="mouseoutevent()"> Keep cursor out me</p>   -->
+
+        <!-- Keydowm event -->
+        <h2> Enter something here</h2>
+        <input type="text" id="input1" onkeydown="keydownevent()"/>
+
+         <!-- onload event -->
+         
+        <body onload="window.alert('Page successfully loaded');">  
+
+
+  
+  
+</body>
+
+</html>
+

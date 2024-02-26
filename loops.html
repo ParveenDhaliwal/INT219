@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    </head>
+    <body>
+        <p>Simple For Loop to print sum of number upto your choice</p>
+        <button onclick="forsimple()">For Loop</button>
+        <p id="ForLoop"></p>
+
+        <p>Display the array elements using for in loop</p>
+        <button onclick="forin()">For In</button>
+        <p id="ForIn"></p>
+
+        <p>Display the 5 numbers starting from 11</p>
+        <button onclick="dowhile()">Do While</button>
+        <p id="DoWhile"></p>
+
+        <p>Display the 5 numbers starting from 11</p>
+        <button onclick="whileonly()">While</button>
+        <p id="Whileonly"></p>
+    </body>
+    <script>
+        function forsimple(){
+            var x = prompt("Enter integer upto which you want to find sum");
+            var sum=0;
+            for(i=1;i<=x;i++){
+                sum = sum+i;
+            }
+            console.log("Sum is " + sum);
+            //document.write("Sum is " + sum);
+            document.getElementById("ForLoop").innerHTML="Sum is " + sum;
+        }
+
+        function forin(){
+            const numbers = [45, 4, 9, 16, 25];
+            let txt = "";
+            for (let x in numbers) {
+                txt += numbers[x] +"<br>";
+                //console.log(numbers[x]);
+            }
+            console.log(txt);
+            // document.write("sum is  " + txt);
+            document.getElementById("ForIn").innerHTML=txt;
+        }
+        function dowhile(){
+            var x = 11;
+            var y = 15;  
+            do{  
+                console.log(x);
+                //document.getElementById("DoWhile").innerHTML= x + "<br>";  
+                x++;  
+            }while (x<=y);
+        }   
+        function whileonly(){
+            var i=11;  
+            while (i<=15)  
+            {  
+                console.log(i);
+                //document.getElementById("DoWhile").innerHTML= i + "<br>";  
+                i++;   
+            }  
+        }
+
+        //foreach
+        arr =[9,8,7,0,8];
+            arr.forEach(e => {document.writeln(e)
+                
+            });
+    </script>
+</html>

@@ -1,0 +1,46 @@
+<html>
+<style>
+.ele{
+border:20px solid;
+padding:30px;
+position: relative;
+top:20%;
+margin:auto;
+width:30%;
+}
+
+
+</style>
+<body>
+<div id="outermost" class="ele">
+<div id="inner" class="ele">
+
+<!-- use onclick="event.stopPropagation()" to stop propagation -->
+<div id ="innermost" class="ele" ></p>
+
+</div>
+
+<script>
+innermost.addEventListener("mouseover", function(){
+    this.style.borderColor = 'red';
+    this.style.transform = 'rotate(360deg)';
+    this.style.transition = '2s';
+});
+inner.addEventListener("mouseover", function(){
+    this.style.borderColor = 'green';
+    this.style.transform = 'rotate(360deg)';
+    this.style.transition = '2s';
+});
+outermost.addEventListener("mouseover", function(){
+    this.style.borderColor = 'blue';
+    this.style.transform = 'rotate(360deg)';
+    this.style.transition = '2s';
+});
+
+
+</script>
+
+
+</body>
+
+</html>

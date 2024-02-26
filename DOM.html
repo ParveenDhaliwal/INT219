@@ -1,0 +1,136 @@
+<!-- The document object represents the whole html document.
+When html document is loaded in the browser, 
+it becomes a document object. 
+It is the root element that represents the html document. 
+It has properties and methods. By the help of document object, 
+we can add dynamic content to our web page. -->
+
+<!-- Method	                  Description
+write("string")	          writes the given string on the doucment.
+writeln("string")	      writes the given string on the doucment with newline character at the end.
+getElementById()	      returns the element having the given id value.
+getElementsByName()    	  returns all the elements having the given name value.
+getElementsByTagName()	  returns all the elements having the given tag name.
+getElementsByClassName()  returns all the elements having the given class name -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width , initial-scale=1.0">
+        <script type="text/javascript">  
+            // Accessing field value by document object
+            function printvalue(){  
+            var name=document.form1.name.value;  
+            alert("Welcome: "+name);  
+            }  
+            // document.getElementById() method
+            function getcube(){  
+                var number=document.getElementById("number").value;  
+                alert(number*number*number);  
+            }
+            // document.getElementsByName() method 
+            function totalelements()  
+            {  
+                var allgenders=document.getElementsByName("gender");  
+                alert("Total Genders:"+allgenders.length);  
+            }  
+            // document.getElementsByTagName() method
+            function countpara(){  
+                var totalpara=document.getElementsByTagName("p");  
+                alert("total p tags are: "+totalpara.length);  
+            }
+
+
+            // innerHTML property
+            function showcommentform() {  
+                var data="Name:<input type='text' name='name'><br>Comment:<br><textarea rows='5' cols='80'></textarea><br><input type='submit' value='Post Comment'>";  
+                document.getElementById('mylocation').innerHTML=data;  
+            }  
+
+            // innerText 
+            function validate() {  
+                var msg;  
+                if(document.myForm.userPass.value.length>5){  
+                    msg="good";  
+                }  
+                else{  
+                    msg="poor";  
+                }  
+                document.getElementById('mylocation').innerText=msg;  
+            }  
+
+
+        </script>
+    </head>
+    <body>
+        <!-- <form name="form1">  
+             <p> Accessing field value by document object </p>
+            Enter Name:<input type="text" name="name"/>  
+            <input type="button" onclick="printvalue()" value="print name"/> <br> 
+            
+            <p> document.getElementById() method </p>
+            Enter No:<input type="text" id="number" name="number"/>  
+            <input type="button" value="cube" onclick="getcube()"/> <br>
+            
+            <p> document.getElementsByName() method  </p>
+            Male:<input type="radio" name="gender" value="male">  
+            Female:<input type="radio" name="gender" value="female">  
+  
+            <input type="button" onclick="totalelements()" value="Total Genders"> <br> 
+        </form> 
+            <p> document.getElementsByTagName() method </p>
+            <p>This is a pragraph</p>  
+            <p>Here we are going to count total number of paragraphs by getElementByTagName() method.</p>  
+            <p>Let's see the simple example</p>  
+            <button onclick="countpara()">count paragraph</button><br>
+            
+            <p> getElementsByClassName() Method </p>
+            <div class="Class">  
+                This is a simple class implementation  
+            </div>  <br>
+            <div class="Class">  
+                This is a simple class2 implementation  
+            </div>
+            <script type="text/javascript">  
+                var x=document.getElementsByClassName("Class");  
+                document.write("On calling x, it will return an array-like object: <br>"+x);  
+            </script>  
+
+          
+            <form name="myForm">  
+
+                <p> innerHTML property </p>
+                <input type="button" value="comment" onclick="showcommentform()">  
+                <div id="mylocation"></div>
+
+                <p> innerText  </p>
+                <input type="password" value="" name="userPass" onkeyup="validate()">
+                Strength:<span id="mylocation">no strength</span>  
+            </form>  
+         -->
+         <!-- <h2>Hello</h2>
+         <h2>hello</h2>
+         <p>INT219 class is going on</p>
+         <h2>How are you</h2>
+         <p>?</p>
+         <h3>Hope you are doing well</h3>
+         <p>I am counting p tags</p>
+         <p>I am counting h2 tags</p>
+         <p id="res"></p>
+         <script>
+            const para = document.getElementsByTagName('p');
+            const paracount = para.length;
+
+            document.getElementById("res").innerHTML = paracount;
+         </script> -->
+         <input name="gender" type="radio" value="male">
+         <input name="gender" type="radio" value="female">
+         <input name="gender" type="radio" value="trans">
+         <p id="res"></p>
+<script>
+
+    let num=document.getElementsByName('gender').length;
+    document.getElementById('res').innerHTML=num;
+</script>
+    </body>
+</html>

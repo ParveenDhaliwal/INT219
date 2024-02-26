@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Validation</title>
+<style>
+    /* Optional: Add some basic styling for better presentation */
+    .error-message {
+        color: red;
+    }
+</style>
+</head>
+<body>
+    <form id="myForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <span id="usernameError" class="error-message"></span>
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <span id="emailError" class="error-message"></span>
+        <br><br>
+        <label for="mobile">Mobile Number:</label>
+        <input type="text" id="mobile" name="mobile">
+        <span id="mobileError" class="error-message"></span>
+        <br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <br><br>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword">
+        <span id="passwordError" class="error-message"></span>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Call the validation function for all fields
+            validateForm();
+        });
+
+        function validateForm() {
+            // Username validation
+            var usernameInput = document.getElementById('username').value.trim();
+            var usernameError = document.getElementById('usernameError');
+            usernameError.textContent = '';
+            var onlyCharacters = /^[a-zA-Z]+$/;
+            if (usernameInput === '') {
+                usernameError.textContent = 'Username is required';
+            } else if (!onlyCharacters.test(usernameInput)) {
+                usernameError.textContent = 'Username should contain only characters';
+            }
+
+            // Email validation
+            var emailInput = document.getElementById('email').value.trim();
+            var emailError = document.getElementById('emailError');
+            emailError.textContent = '';
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (emailInput === '') {
+                emailError.textContent = 'Email is required';
+            } else if (!emailRegex.test(emailInput)) {
+                emailError.textContent = 'Invalid email format';
+            }
+
+            // Mobile number validation
+            var mobileInput = document.getElementById('mobile').value.trim();
+            var mobileError = document.getElementById('mobileError');
+            mobileError.textContent = '';
+            var mobileRegex = /^\d{3}-\d{3}-\d{4}$/;
+            if (mobileInput === '') {
+                mobileError.textContent = 'Mobile number is required';
+            } else if (!mobileRegex.test(mobileInput)) {
+                mobileError.textContent = 'Invalid mobile number format';
+            }
+
+            // Password validation
+            var passwordInput = document.getElementById('password').value;
+            var passwordError = document.getElementById('passwordError');
+            passwordError.textContent = '';
+            var minLength = 8;
+            var containsUppercase = /[A-Z]/;
+            var containsLowercase = /[a-z]/;
+            var containsNumber = /\d/;
+            if (passwordInput.length < minLength) {
+                passwordError.textContent = 'Password must be at least ' + minLength + ' characters long';
+            } else if (!containsUppercase.test(passwordInput) || !containsLowercase.test(passwordInput) || !containsNumber.test(passwordInput)) {
+                passwordError.textContent = 'Password must contain at least one uppercase letter, one lowercase letter, and one number';
+            }
+
+            // Password confirmation validation
+            var confirmPasswordInput = document.getElementById('confirmPassword').value;
+            var confirmPasswordError = document.getElementById('passwordError');
+            confirmPasswordError.textContent = '';
+            if (passwordInput !== confirmPasswordInput) {
+                confirmPasswordError.textContent = 'Passwords do not match';
+            }
+
+            // Check if any error messages are present
+            var errorMessages = document.querySelectorAll('.error-message');
+            var isValid = true;
+            errorMessages.forEach(function(error) {
+                if (error.textContent !== '') {
+                    isValid = false;
+                }
+            });
+
+            // If no error messages, submit the form
+            if (isValid) {
+                document.getElementById('myForm').submit();
+            }
+        }
+    </script>
+</body>
+</html>

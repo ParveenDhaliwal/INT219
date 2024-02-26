@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Remove Event Listener Example</title>
+</head>
+<body>
+
+<button id="myButton">Click Me</button>
+
+<script>
+// Define the event listener function
+function handleClick() {
+  console.log("Button clicked!");
+}
+
+// Get a reference to the button element
+const myButton = document.getElementById("myButton");
+
+// Add event listener to the button
+myButton.addEventListener("click", handleClick);
+// myButton.removeEventListener('click')
+// After 3 seconds, remove the event listener
+setTimeout(() => {
+  myButton.removeEventListener("click", handleClick);
+  console.log("Event listener removed.");
+}, 10000);
+</script>
+
+</body>
+</html>

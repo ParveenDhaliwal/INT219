@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body  >
+        <button id="one" onclick="fun()">Click</button>
+        <button onmouseout="alert()">Mouse</button>
+        <input type="text" onkeypress="alert('Key is pressed')">
+        <input type="text" id="two" onfocus="document.getElementById('two').style.backgroundColor='red'">
+        <button id="three" onclick="fun3()">Window</button>
+        <button id="four" onclick="fun2()">Window</button>
+
+
+    </body>
+    <script>
+        function fun(){
+            document.getElementById("one").style.backgroundColor="yellow";
+        }
+        function fun4(){
+           
+        }
+        function fun3(){
+            window.open(" https://ums.lpu.in/lpuums/LoginNew.aspx");
+        }
+        // let a = prompt("enter the a value");
+        // let b = prompt("enter the b value");
+        function fun2(){
+            let x=confirm();
+            if(x==true){
+                alert("You pressed ok");
+            }
+            else{
+                alert("You pressed Cancel");
+            }
+        }
+    </script>
+</html>

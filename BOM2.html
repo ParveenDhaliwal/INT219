@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <button onclick="alert('Hello')">Alert</button>
+        <button onclick="fun()">Confirm</button>
+        <button onclick="fun2()">Open</button>
+        
+    </body>
+    <script>
+        function fun(){
+            let a = confirm('Are you sure?');
+            if(a==true){
+                alert("Ok is pressed");
+            }
+            else{
+                alert("Cancel is pressed");
+            }
+        }
+        function fun2(){
+            window.open('https://ums.lpu.in/lpuums/facultydashboard.aspx');
+        }
+    </script>
+</html>

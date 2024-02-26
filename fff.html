@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="fun3()">
+    <button id="one" onmouseout=fun()>Click</button>
+    <input type="text" id="input" onkeyup="keyup()">
+    <input type="text" id="two" onfocus="fun2()">
+    <script>
+        
+        function fun(){
+            document.getElementById("one").style.backgroundColor="yellow";
+        }
+        function keyup(){
+            alert(`Some key is pressed`)
+        }
+        function fun2(){
+            document.getElementById("two").style.backgroundColor="Red";
+        }
+        function fun3(){
+            alert("koi aaya !!")
+        }
+            
+        
+
+    </script>
+    
+</body>
+</html>

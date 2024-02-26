@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta lang="en" charset="utf-8">
+        <meta name="viewport" content="width= device-width, initail-scale=1.0">
+
+    </head>
+    <body>
+        <form name="Form1">
+            Enter the name:<input type="text" name="name1">
+            <button onclick="fun1()">Submit</button><br>
+
+            Enter email: <input type="email" name="email1" id="email1">
+            <button onclick="fun2()">Submit</button><br>
+
+            Male <input type="radio" name="gender" value="male">
+            Female <input type="radio" name="gender" value="female">
+            <button onclick="fun3()">Total Genders</button><br><br>
+
+
+           <p>Hello </p>
+           <p>How are you?</p>
+           <p>My name is Jot</p>
+           <button onclick="fun4()">Countpara</button>
+            
+            <div class="Class">
+                This is a simple Class implementation
+            </div><br>
+            <script>
+                 var x=document.getElementsByClassName('Class');
+                document.write("Value of x is :"+ x);
+            </script>
+
+            <p> innerHTML property </p>
+                <input type="button" value="comment" onclick="fun5()"> 
+                <div id="mylocation"></div> 
+            <br>
+            <p> innerText  </p>
+            <input type="password" value="" name="userPass" onkeyup="validate()">
+            Strength:<span id="mylocation">no strength</span>  
+                      
+            <script>
+                function fun1(){
+                    var name = document.Form1.name1.value;
+                    alert("Entered name is "+ name);
+                }
+                function fun2(){
+                    var email=document.getElementById("email1").value;
+                    alert("Entered email is "+ email);
+
+                }
+
+                function fun3(){
+                    var count = document.getElementsByName("gender");
+                    alert("Total no. of genders are: "+ count.length);
+                }
+
+               
+
+
+                function fun4(){
+                    let y=document.getElementsByTagName("p");
+                    alert("Count of p tag is:"+ y.length);
+                }
+
+                function fun5(){
+ 
+                    var data="Name:<input type='text' ><br>Comment:<textarea rows='5' cols='80'></textarea><br><input type='submit' value='Post comment'>";
+                    document.getElementById("mylocation").innerHTML=data;
+
+                }
+               
+
+
+            </script>
+        </form>
+    </body>
+</html>

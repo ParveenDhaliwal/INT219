@@ -1,0 +1,21 @@
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .main-image {
+    margin-bottom: 20px;
+  }
+  
+  .thumbnail-container {
+    display: flex;
+  }
+  
+  .thumbnail {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  

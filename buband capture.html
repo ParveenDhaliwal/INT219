@@ -1,0 +1,48 @@
+<!-- Bubbling, the event of paragraph element is handled first, 
+    and then the div element's event is handled. 
+    It means that in bubbling, the inner element's event is handled first,  
+    and then the outermost element's event will be handled.
+
+    In Capturing the event of div element is handled first, 
+    and then the paragraph element's event is handled.
+     It means that in capturing the outer element's event is handled first, 
+     and then the innermost element's event will be handled. -->
+
+     <!DOCTYPE html>
+<html>
+<head>
+<style>
+div{
+background-color: lightblue;
+border: 2px solid red;
+font-size: 25px;
+text-align: center;
+}
+span{
+border: 2px solid blue;
+}
+</style>
+</head>
+<body>
+<h1> Bubbling </h1>
+<div id = "d1">
+This is a div element.
+<br><br>
+<span id = "s1"> This is a span element. </span>
+</div>
+<h1> Capturing </h1>
+<div id = "d2"> This is a div element.
+<br><br>
+<span id = "s2"> This is a span element. </span>
+</div>
+
+<script>
+document.getElementById("d1").addEventListener("dblclick", function() {alert('You have double clicked on div element')}, false);
+document.getElementById("s1").addEventListener("dblclick", function() {alert('You have double clicked on span element')}, false);
+document.getElementById("d2").addEventListener("dblclick", function() {alert('You have double clicked on div element')}, true);
+document.getElementById("s2").addEventListener("dblclick", function() {alert('You have double clicked on span element')}, true);
+</script>
+</body>
+</html>
+
+ 

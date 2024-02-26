@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Bubbling Example</title>
+<style>
+  .container {
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  .nested {
+    padding: 10px;
+    border: 1px solid #f00;
+  }
+</style>
+</head>
+<body>
+
+<div class="container" id="container">
+  <div class="nested" id="nested">
+    Click me!
+  </div>
+</div>
+
+<script>
+  // Get the container and nested elements
+  const container = document.getElementById('container');
+  const nested = document.getElementById('nested');
+
+  // Add click event listener to the nested element
+  nested.addEventListener('click', function(event) {
+    console.log('Nested element clicked!');
+    console.log('Event target:', event.target);
+    console.log('Current target:', event.currentTarget);
+  });
+
+  // Add click event listener to the container element
+  container.addEventListener('click', function(event) {
+    console.log('Container element clicked!');
+    console.log('Event target:', event.target);
+    console.log('Current target:', event.currentTarget);
+  });
+</script>
+
+</body>
+</html>

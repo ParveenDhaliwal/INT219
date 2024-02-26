@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    </head>
+    <body>
+        <p>To find greater of 3 numbers using if else </p>
+       <button onclick="ifs()">Click me </button>
+       <p id="ifs1"></p>
+        <p>To show the day name using switch</p>
+       
+       <button onclick="switchf()">Click me</button>
+       <p id ="switch1"></p>
+    </body>
+    <script>
+        function ifs(){
+            var a = prompt("Enter first number:");
+            var b = prompt("Enter second number:");
+            var c = prompt("Enter thord number:");
+            if(a>b && a>c){
+                console.log("a is greater");
+                document.getElementById("ifs1").innerHTML=" a is greater";
+
+            }
+            else if(b>a && b>c){
+                console.log("b is greater");
+                document.getElementById("ifs1").innerHTML=" b is greater";
+            }
+            else{
+                console.log("c is greater");
+                document.getElementById("ifs1").innerHTML=" c is greater";
+            }
+        }
+       
+        function switchf(){
+            var day = new Date().getDay();
+            var dayName;
+
+            switch(day) {
+                case 0:
+                    dayName = 'Sunday';
+                    break;
+                case 1:
+                    dayName = 'Monday';
+                    break;
+                case 2:
+                    dayName = 'Tuesday';
+                    break;
+                case 3:
+                    dayName = 'Wednesday';
+                    break;
+                case 4:
+                    dayName = 'Thursday';
+                    break;
+                case 5:
+                    dayName = 'Friday';
+                    break;
+                case 6:
+                    dayName = 'Saturday';
+                    break;
+                default:
+                    dayName = 'Unknown';
+                }
+
+                console.log('Today is ' + dayName);
+                document.getElementById("switch1").innerHTML= "Today is "+ dayName;
+        }
+        let c = new Date().getDay();
+        console.log(c);
+       </script>
+</html>

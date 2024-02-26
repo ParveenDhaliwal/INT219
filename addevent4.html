@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="b1" style="width: 20px">Click Me</button>
+    <p id="p1"></p>
+    <script>
+        const button = document.getElementById("b1");
+        b1.addEventListener("click", () => {
+            button.style.color = 'white';
+            button.style.backgroundColor = 'blue';
+            button.style.padding = '20px';
+
+        })
+        b1.addEventListener("click", fun);
+        function fun() {
+            document.getElementById("p1").innerHTML="This is the text after click";
+        }
+       b1.removeEventListener("click",fun );
+            
+    </script>
+</body>
+</html>

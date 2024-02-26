@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta lang="en" charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            let a = 10;
+            var b = 20;
+
+            let c = a+b;
+            console.log(a);
+            document.write("value of a is :"+ a +"<br>");
+            console.log(b);
+            document.write("value of b is :"+ b +"<br>");
+            console.log(c);
+            document.write("value of c is :"+ c +"<br>");
+            const d = "Hello";
+            console.log(d);
+            document.write("value of d is :"+ d +"<br>");
+        </script>
+        <script>
+            
+                var e="Welcome";
+                let f= "Class of INT219";
+            
+            function fun(){
+               var e="One";
+                let f="Two";
+
+                document.write(e+f);
+            }
+
+            var e="Hello";
+            //let f="world";
+            function fun1(){
+
+            document.write(e+f);
+            }
+
+            let g = "hello";
+			function greet() 
+					{
+			            let h = "World"
+    				    console.log(g + h);
+					}
+					greet();
+			        //console.log(g + h); // error
+                    const student = {
+		 			firstName: 'ram',
+		    			clas: 10
+				};
+                console.log(student.firstName);
+                console.log(student["clas"]);
+
+
+
+        
+
+            
+        </script>
+        <script>
+            const person = {
+                name: 'John',
+                 age: 30,
+
+                // accessing name property by using this.name
+                greet: function() { console.log('The name is' + ' ' + this.name); }
+            };
+person.greet();
+        </script>
+        <input type="button" onclick="fun()" value="scope1">
+        <input type="button" onclick="fun1()" value="scope2">
+    </body>
+</html>

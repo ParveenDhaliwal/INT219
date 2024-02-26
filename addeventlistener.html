@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p> This is an example of adding multiple events of different type to the same element. </p>
+<p> Click the following button to see the effect. </p>
+<button id = "btn"> Click me </button>
+<p id = "para"></p>
+<p id = "para1"></p>
+<script>
+function fun1() {
+    alert("Welcome");
+}
+ 
+function fun2() {
+   document.getElementById("para").innerHTML =  "This is second function";
+
+}
+function fun3() {
+   document.getElementById("para1").innerHTML =  "This is third function";
+}
+
+function fun() {
+    btn.style.width = "50px";
+	btn.style.height = "50px";
+	btn.style.background = "yellow";
+	btn.style.color = "blue";
+}
+ 
+
+function fun4() {
+    btn.style.width = "";
+	btn.style.height = "";
+	btn.style.background = "";
+	btn.style.color = "";
+}
+var mybtn = document.getElementById("btn");
+mybtn.addEventListener("mouseover", fun);
+mybtn.addEventListener("click", fun1);
+mybtn.addEventListener("click", fun2);
+mybtn.addEventListener("click", fun3);
+mybtn.addEventListener("mouseout", fun4);
+
+mybtn.removeEventListener("click", fun2);
+mybtn.removeEventListener("click", fun3);
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
+
+ 

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <label for="num1"></label>
+        <input type="text" id="num1">
+        <label for="num2"></label>
+        <input type="text" id="num2">
+        <button id="but1" onclick=fun()> Get Sum</button>
+        <p id="demo"></p>
+    <script>
+        function fun(){
+        let x = document.getElementById("num1").value;
+        let y = document.getElementById("num2").value;
+        if(x==""||y==""){
+            alert("No input given");
+        }
+        else if(isNaN(x)||isNaN(y)){
+            alert("Only number should be enter");
+        }
+        else{
+        x = parseInt(x);
+        y = parseInt(y);
+        document.getElementById("demo").innerHTML = x + y;
+        }
+    }
+    </script>
+    </body>
+
+</html>

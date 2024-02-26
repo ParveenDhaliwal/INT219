@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function fun(){
+                document.write("Hello how are you?")
+            }
+        </script>
+        <script src="file.js"></script>
+        
+    </head>
+    <body>
+        <p> Javascript with in the body of html</p>
+        <script> 
+            document.write("hello");
+        </script>
+        <p> Javascript within head tag of html</p>
+        <input type="button" onclick="fun()" value="head">
+
+        <p>External javascript file</p>
+        <input type="button" onclick="fun1()" value="external">
+
+        <p>Using javascript with innerHTML</p>
+        <p id="one"></p>
+
+        <p> Using console.log</p>
+        <script>
+            console.log("Here I am using console.log");
+        </script>
+
+        <p> Using alert</p>
+        <input type="button" onclick="fun2()" value="alert">
+        <script>
+            function fun2(){
+                alert("Hello");
+            }
+        </script>
+
+        <input type="button" onclick="fun3()" value="Click me">
+        <script>
+            function fun3(){
+                document.write("This is the information i got after clicking on button");
+            }
+        </script>
+    
+    </body>
+    <script>
+        document.getElementById("one").innerHTML="Hope you are doing good";
+    </script>
+    <html>    
+<head>    <title>Add function</title>     </head>
+
+<body onload="add()">   // Execute a JavaScript immediately after a page has been loaded
+    <script>
+        var i=Number(prompt("Enter 1st variable"));
+        var j=Number(prompt("enter 2nd varialbe"));
+        function add()
+        {
+        document.write("the sum is ",(i+j));
+        }
+        </script>
+</body>
+</html>
+    
+</html>

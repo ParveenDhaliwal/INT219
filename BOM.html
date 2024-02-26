@@ -1,0 +1,93 @@
+<!-- The Browser Object Model (BOM) is used to interact with the browser. -->
+
+<!-- window objects 
+alert()	displays the alert box containing message with ok button.
+confirm()	displays the confirm dialog box containing message with ok and cancel button.
+prompt()	displays a dialog box to get input from the user.
+open()	opens the new window.
+close()	closes the current window.
+setTimeout()	performs action after specified time like calling function, evaluating expressions etc. -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width , initial-scale=1.0">
+        <script type="text/javascript">  
+        // alert()
+            function msg(){  
+             alert("Hello Alert Box");  
+            }  
+            // confirm()
+            function msg1(){  
+                var v= confirm("Are u sure?");  
+                if(v==true){  
+                    alert("ok");  
+                }  
+                else{  
+                    alert("cancel");  
+                }  
+            }
+            // prompt()
+            function msg2(){  
+                var v= prompt("Who are you?");  
+                alert("I am "+v);  
+            }  
+            // open() 
+            function msg3(){  
+                open("https://lpulive.lpu.in/lpu-demo1/messages/5022883");  
+            } 
+
+            // setTimeout() 
+
+            function msg4(){  
+                setTimeout(  
+                function(){  
+                    alert("Welcome to INT219 after 5 seconds")  
+                },5000);  
+  
+            }  
+            // close() 
+            function msg5(){  
+                close("https://lpulive.lpu.in/lpu-demo1/messages/5022883");  
+            } 
+
+        </script>  
+        
+    </head>
+    <body>
+        <input type="button" value="alert" onclick="msg()"/><br>  
+        <input type="button" value="delete record" onclick="msg1()"/> <br>
+        <input type="button" value="prompt" onclick="msg2()"/> <br>
+        <input type="button" value="open" onclick="msg3()"/> <br>
+        <input type="button" value="setTime" onclick="msg4()"/>  <br>
+        <input type="button" value="close" onclick="msg5()"/> 
+        <script>
+             window.alert("hello");  
+            //  is same as 
+            //  alert("hello");
+        </script>
+
+            <!-- navigator objects -->
+        <script>
+            document.writeln("<br/>navigator.appCodeName: "+navigator.appCodeName);  
+            document.writeln("<br/>navigator.appName: "+navigator.appName);  
+            document.writeln("<br/>navigator.appVersion: "+navigator.appVersion);  
+            document.writeln("<br/>navigator.cookieEnabled: "+navigator.cookieEnabled);  
+            document.writeln("<br/>navigator.language: "+navigator.language);  
+            document.writeln("<br/>navigator.userAgent: "+navigator.userAgent);  
+            document.writeln("<br/>navigator.platform: "+navigator.platform);  
+            document.writeln("<br/>navigator.onLine: "+navigator.onLine+"<br/>");  
+        </script>
+                <!-- Screen Object -->
+        <script>  
+            document.writeln("<br/>screen.width: "+screen.width);  
+            document.writeln("<br/>screen.height: "+screen.height);  
+            document.writeln("<br/>screen.availWidth: "+screen.availWidth);  
+            document.writeln("<br/>screen.availHeight: "+screen.availHeight);  
+            document.writeln("<br/>screen.colorDepth: "+screen.colorDepth);  
+            document.writeln("<br/>screen.pixelDepth: "+screen.pixelDepth);  
+        </script>  
+       
+    </body>
+</html>

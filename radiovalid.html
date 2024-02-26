@@ -1,0 +1,100 @@
+<form id="radioForm">
+    <input type="radio" id="option1" name="option" value="1">
+    <label for="option1">Option 1</label><br>
+    <input type="radio" id="option2" name="option" value="2">
+    <label for="option2">Option 2</label><br>
+    <input type="radio" id="option3" name="option" value="3">
+    <label for="option3">Option 3</label><br>
+    <span id="radioError" class="error-message"></span>
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+
+<script>
+    document.getElementById('radioForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Validate radio buttons
+        var radioInputs = document.getElementsByName('option');
+        var radioError = document.getElementById('radioError');
+        radioError.textContent = '';
+        var isChecked = false;
+        for (var i = 0; i < radioInputs.length; i++) {
+            if (radioInputs[i].checked) {
+                isChecked = true;
+                break;
+            }
+        }
+        if (!isChecked) {
+            radioError.textContent = 'Please select an option';
+        } else {
+            // Proceed with form submission or further processing
+            console.log('Radio button selection is valid');
+        }
+    });
+</script>
+<form id="checkboxForm">
+    <input type="checkbox" id="checkbox1" name="checkbox1" value="1">
+    <label for="checkbox1">Checkbox 1</label><br>
+    <input type="checkbox" id="checkbox2" name="checkbox2" value="2">
+    <label for="checkbox2">Checkbox 2</label><br>
+    <input type="checkbox" id="checkbox3" name="checkbox3" value="3">
+    <label for="checkbox3">Checkbox 3</label><br>
+    <span id="checkboxError" class="error-message"></span>
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+
+<script>
+    document.getElementById('checkboxForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Validate checkboxes
+        var checkboxInputs = document.querySelectorAll('input[type="checkbox"]');
+        var checkboxError = document.getElementById('checkboxError');
+        checkboxError.textContent = '';
+        var isChecked = false;
+        for (var i = 0; i < checkboxInputs.length; i++) {
+            if (checkboxInputs[i].checked) {
+                isChecked = true;
+                break;
+            }
+        }
+        if (!isChecked) {
+            checkboxError.textContent = 'Please select at least one checkbox';
+        } else {
+            // Proceed with form submission or further processing
+            console.log('Checkbox selection is valid');
+        }
+    });
+</script>
+<form id="dropdownForm">
+    <select id="dropdown" name="dropdown">
+        <option value="">Select an option</option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+    </select>
+    <span id="dropdownError" class="error-message"></span>
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+
+<script>
+    document.getElementById('dropdownForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Validate dropdown list
+        var dropdownValue = document.getElementById('dropdown').value;
+        var dropdownError = document.getElementById('dropdownError');
+        dropdownError.textContent = '';
+        if (dropdownValue === '') {
+            dropdownError.textContent = 'Please select an option';
+        } else {
+            // Proceed with form submission or further processing
+            console.log('Dropdown selection is valid');
+        }
+    });
+</script>
+
+

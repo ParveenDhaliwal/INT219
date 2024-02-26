@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta lang="en" charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function fun(){
+                document.write("This is the information i got after clicking on button.");
+            }
+        </script>
+    </head>
+    <body>
+        
+        <input type="button" onclick="fun()" value="Click me">
+        <button onclick="window.print()">Print option</button>
+        <!-- <script>
+            //alert("Hello");
+            var a =parseInt(prompt("Enter the value of a"));
+            var b =parseInt(prompt("Enter the value of b"));
+           function f2(c,d){
+            let e=c+d;
+            document.write("Sum is :"+ e);
+           }
+           f2(a,b);
+        </script> -->
+        <p id="demo"></p>
+
+        <!-- <script>
+            let x = 5;
+            document.getElementById("demo").innerHTML = (x == "5");
+            // document.getElementById("demo").innerHTML = (x === "5");
+        </script> -->
+        <!-- <script>
+            //document.getElementById("demo").innerHTML = 5 & 1;
+            // document.getElementById("demo").innerHTML = 5 | 1;
+            document.getElementById("demo").innerHTML = 5 ^ 1;
+
+        </script> -->
+        <!-- <script>
+            var a =Number(prompt("Enter the value of a"));
+            var b =Number(prompt("Enter the value of b"));
+            var c =Number(prompt("Enter the value of c"));
+            if(a>b && a>c){
+                document.write("A is greater");
+            }
+            else if(b>a && b>c){
+                document.write("B is greater");
+            }
+            else{
+                document.write("C is greater");
+            }
+        </script> -->
+        <script>
+            var a =Number(prompt("Enter the percentage"));
+            var b= parseInt(a/10);
+            switch(b){
+                case 9: alert("Grade is A");
+                break;
+                case 8: alert("Grade is B");
+                break;
+                case 7: alert("Grade is C");
+                break;
+                case 6: alert("Grade is D");
+                break;
+                case 5: alert("Grade is E");
+                break;
+                default: alert("Fail");
+            }
+            
+        </script>
+
+        
+    </body>
+</html>

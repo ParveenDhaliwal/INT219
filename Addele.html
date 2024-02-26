@@ -1,0 +1,30 @@
+<html>
+<body>
+   <!-- <div id="new">
+      <p id="p1">Hello</p>
+      <p id="p2">How are you?</p>
+   </div>
+   <script>
+      var tag = document.createElement("p");
+      var text = document.createTextNode("INT219");
+      tag.appendChild(text);
+      var element = document.getElementById("new");
+      element.appendChild(tag);
+   </script> -->
+    <h2>JavaScript HTML DOM</h2>
+    <p>How to add a new element to HTML DOM</p>
+    <div id="div1">
+       <p id="p1">Introduction.</p>
+       <p id="p2">Conclusion.</p>
+    </div>
+    <script>
+        var para=document.createElement("p");
+        var data=document.createTextNode("This is new element");
+        para.appendChild(data);
+       var element = document.getElementById("div1");
+       var child = document.getElementById("p2");
+        element.appendChild(para,child);
+    
+    </script>
+</body>
+</html>

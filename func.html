@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Function in Javascript</title>
+</head>
+<body>
+
+    <!-- <input type="number" id="num3">
+    <button id="submitButton"></button>
+    <p>Table</p> -->
+    <!-- <h1>Addition of two number</h1>
+    <input type="number" id="num1" placeholder="number1">
+    <input type="number" id="num2" placeholder="number2">
+    <button onclick="add()">Add</button>
+    <p id="result"></p> -->
+
+    <!-- <form action="">
+        <input type="number" id="num" placeholder="ENTER NUMBER">
+        <button onclick="tables()">Multiplication</button>
+    </form> -->
+    <script>
+        // let arr=[2,5,7,9];
+        // let arr1= new Array(2 , 5 , 7 , 9);
+
+        // for(let i=0;i<arr.length;i++){
+        //     document.write(arr[i]);
+        // }
+
+        // for(let x in arr1){
+        //     document.write(arr[x]);
+        // }
+
+        // for(let y of arr1){
+        //     document.write(y);
+        // }
+
+        // arr.forEach((t)=>{
+        //     document.write(t);    
+        // })
+
+        // const student={
+        //     name:"Parveen",
+        //     Class:"INT219",
+        //     age:30,
+        //     course:function(){
+        //         document.write("Class is going on");
+        //     }
+        // }
+        // delete student.age;
+
+        // document.write(student.name);
+        // document.write(student["Class"]);
+        // student.course();
+        // student.domain="KD15";
+        // document.write(student.age);
+        
+
+        // document.write(student.domain);
+        // const func1=(num1,num2,num3)=> num1*num2*num3;
+        
+        // document.write(func1(2,3,4))
+        
+        // let a=prompt();
+        // function table(a,n=1){
+        //     if(n==11){
+        //         return;
+        //     }
+        //     else{
+        //         document.write(`${a} * ${n} = ${a*n}`);
+        //         document.write("<br>");
+        //         table(a,n+1);
+        //     }
+           
+        // }
+        // table(a);
+
+
+
+
+
+
+        // function tables(){
+        //     let a=parseInt(document.getElementById("num").value);
+        //     for(let i=1;i<11;i++){
+        //         document.write(a+" * "+i+" = "+(a*i)+"<br>");
+        //     }
+        // }
+
+
+        // function add(){
+        //     let a = prompt("Enter 1st number: ");
+        //     let b = prompt("Enter 2nd num:");
+        //     document.getElementById("ans").innerHTML=`The sum is ${a} and ${b} is ${parseInt(a)+parseInt(b)} `;
+        // }
+
+
+        // function add() {
+        //     var num1=document.getElementById('num1').value;
+        //     var num2=document.getElementById('num2').value;
+        //     var sum=Number(num1)+Number(num2);
+        //     document.getElementById('result').innerHTML="The sum is "+sum;
+        // }
+        // var a = Number(prompt("Enter value of a: "));
+        // var b = Number(prompt("Enter value of b: "));
+        // var c = Number(prompt("Enter value of c: "));
+        // func = (x,y,z) => document.write("Addition is: "+(x+y+z));
+        // func(a,b,c);
+        //recursive function show addition of 1 to 10 
+        // function addfun(number){
+        //    document.write(number + "<br>");
+        //     const newNumber = number+1;
+        //     if(newNumber<11){
+        //         addfun(newNumber);
+        //     }
+        // }
+        //     addfun(1);
+
+        // const h = ()=> document.write("Hello");
+        // h();
+
+        // var add = (a,b)=>{
+        //     document.getElementById("add").innerHTML=a+b;
+        // }
+        // add(4,5);
+
+        // let person={
+        //     name:"John",
+        //     age:30,
+        //     func:function (){
+        //         document.write("Welcome");
+        //     }
+        // }
+    //     document.write(person.name);
+    //    // document.write(person["age"]);
+    //     person.func();
+    //     person.isAdmin=true;
+    //     document.write(person.isAdmin);
+    //     delete person.age;
+    //     document.write(person["age"]);
+
+
+
+    // const myArray = ['h', 'e', 'l', 'l', 'o'];
+    // const arr2 = ['c','l','a','s','s'];
+    // const arr3= myArray.concat(arr2);
+    // arr3.forEach(function(element){
+    //     document.write(element);
+    // });
+        
+    // });
+
+    // document.write(myArray[0]);
+    // //document.write(myArray[5]);
+    // for(let i=0; i<(myArray.length);i++){
+    //     document.write(myArray[i]);
+    //     console.log(myArray[i]);
+    // }
+
+    //myArray.forEach((e)=>{ document.write(e + "<br>");})
+    // myArray.push('p');
+    // for(let x in myArray){
+    //     document.write(myArray[x]);
+    // }
+    // myArray.unshift('m');
+    // for(let y of myArray){
+    //     document.write(y);
+    // }
+
+    //     // function add(a,b) {
+    //     //     let c = a+b;
+    //     //     document.write("Addition of a and b is :"+ c);
+    //     // }
+    //     // let a= Number(prompt("Enter the value of a"));
+    //     // let b = parseInt(prompt("Enter the value of b"));
+        // add(a,b); 
+
+
+        // var s = (a,b,c) => {  let d=a+b+c;  document.write(d);  }  
+        // s(100,200,300);  
+    </script>
+    <!-- <script>
+        let a = 20;
+        const b = 30;
+        var c = a+b;
+        document.write("value of c is:"+ c+ "<br>");
+        function fun(){
+            let a = 10;
+            var b = 20;
+            document.write("addition of a and b is :"+(a+b)+"<br>");
+        }
+        fun();
+        //let a = 30;
+        //var b = 40;
+        //const c =a+b;
+        var c =a+b;
+        document.write("value of c is:"+ c+ "<br>");
+        //function with arguments and try catch 
+        let e = Number(prompt("enter the first no"));
+        let f = Number(prompt("enter the second no"));
+        function fun2(g,h){
+            try{
+                if(g==""||h==""){
+                    throw new Error("No input is given");
+                }
+                else{
+            var i=g+h;
+                }
+            
+            document.write("Addition of two numbers is :"+i);
+            }
+            catch(e){
+                document.write(e.message+"<br>");
+            }
+            finally{
+                document.write("Finally block is always executed");
+            }
+        }
+        fun2(e,f);
+
+        // recursive function show addition of 1 to 10 
+        function addfun(number){
+           document.write(number + "<br>");
+            const newNumber = number+1;
+            if(newNumber<11){
+                addfun(newNumber);
+            }
+        }
+            addfun(1);
+
+        // function expression  
+  
+        var myfun1 = function show() {  
+            console.log("It is a Function Expression");     
+        }  
+        myfun1();
+        
+        // Anonymous function  
+        
+        var myfun2 = function () {  
+            console.log("It is an Anonymous Function");     
+        }  
+        myfun2();
+     
+        //Arrow function  
+        
+        var myfun3 = () => {  
+            console.log("It is an Arrow Function");     
+        }; 
+        myfun3(); 
+        //Optional parentheses for the single parameter
+        var num = x => {  
+            console.log(x);  
+        }  
+        num(140);  
+
+        //Optional braces for single statement and the empty braces if there is not any parameter required.
+        var show = () => console.log("Hello World");  
+        show(); 
+        
+        var s = (a,b,c) => {  d=a+b+c;
+            console.log(a + " " + b + " " + c +" "+d);  
+        }  
+        s(100,200,300);  
+
+  
+   -->
+
+    <!-- </script> -->
+
+</body>
+</html>

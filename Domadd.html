@@ -1,0 +1,66 @@
+  <!DOCTYPE html>
+<html>
+    <head>
+        <title>adding new element in HTML using DOM</title>
+    </head>
+    <body>
+        <h3>Adding new element using create and append</h3>
+        <script>
+            var e1=document.createElement('p');
+            var text=document.createTextNode("how are you?");
+            e1.appendChild(text);
+            document.body.appendChild(e1);
+            //e1.remove();
+        </script>
+
+        <h3>Adding element to parent element  </h3>
+        <div id="one">
+            <p>Hello</p>
+            
+        </div>
+        <script>
+            var e2=document.createElement('p');
+            var text1=document.createTextNode("World! ");
+            var parent=document.getElementById("one");
+            e2.appendChild(text1);
+            parent.appendChild(e2);
+            //parent.removeChild(e2);
+        </script>
+        <h3>Insert element at specified position in parent using insertBefore</h3>
+        <div id="two">
+            <p id="p1">Welome</p>
+            <p id="p2">to the </p>
+            <p id="p3">INT219</p>
+        </div>
+        <script>
+            var e3=document.createElement('p');
+            var text2=document.createTextNode("class of");
+            e3.appendChild(text2);
+            var parent=document.getElementById("two");
+            var child=document.getElementById("p3");
+            parent.insertBefore(e3,child);
+        </script>
+
+        <h3>add HTML content directly using the innerHTML</h3>
+        <div id="three">
+            <p>Hello</p>
+        </div>
+        <script>
+            var parent=document.getElementById("three");
+            parent.innerHTML+='<p>New content</p>';
+        </script>
+
+        <h3>Insert HTML at a specified position relative to the element</h3>
+        <div id="four">
+            <p>Welcome</p>
+
+        </div>
+        <script>
+            var parent = document.getElementById('four');
+            //var child = document.createElement('p');
+            //parent.insertAdjacentElement('beforeend', child);
+            parent.insertAdjacentHTML('beforeend', '<p>New content</p>');
+        </script>
+       
+    </body>
+</html>

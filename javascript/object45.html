@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            const Person={
+                Name:"Ram",
+                Rollno:23,
+                Class:"INT219",
+                fun:function(){
+                    document.write("Name of the student is "+ this.Name +"<br>");
+                },
+
+                get roll(){
+                    return this.Rollno;
+                },
+
+                set clas(value){
+                    this.Class=value;
+                }
+            }
+            // ways to access the property
+            document.write(Person.Class+"<br>");
+            document.write(Person["Rollno"]+"<br>");
+
+            //method call 
+            Person.fun();
+            document.write(Person.roll);
+            let y="Int";
+            Person.clas=y;
+            document.write(Person.Class);
+
+            Person.Address="LPU";
+            document.write(Person.Address);
+
+            delete Person.Class;
+            document.write(Person.Class);
+
+        </script>
+    </body>
+</html>

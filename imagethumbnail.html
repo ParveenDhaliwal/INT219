@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Gallery</title>
+<style>
+  .gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .main-image {
+    margin-bottom: 20px;
+  }
+  
+  .thumbnail-container {
+    display: flex;
+  }
+  
+  .thumbnail {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+</style>
+</head>
+<body>
+
+<div class="gallery-container">
+  <div class="main-image">
+    <img id="mainImg" src="DOM Dynamo Dive.png" alt="Main Image" height="200px" width="100px">
+  </div>
+  <div class="thumbnail-container" id="thumbnailContainer">
+    <img class="thumbnail" src="DOM Dynamo Dive.png" alt="Thumbnail 1" onclick="changeImage('DOM Dynamo Dive.png')">
+    <img class="thumbnail" src="WhatsApp Image 2024-02-03 at 10.56.48 AM (1).jpeg" alt="Thumbnail 2" onclick="changeImage('WhatsApp Image 2024-02-03 at 10.56.48 AM (1).jpeg')">
+    <img class="thumbnail" src="DOM Dynamo Dive.png" alt="Thumbnail 3" onclick="changeImage('DOM Dynamo Dive.png')">
+    <!-- Add more thumbnails as needed -->
+  </div>
+</div>
+
+<script >
+  function changeImage(imageUrl) {
+    document.getElementById('mainImg').src = imageUrl;
+  }
+  
+  // Optional: Preload images for smoother transition
+  const thumbnailImages = document.querySelectorAll('.thumbnail');
+  thumbnailImages.forEach(thumbnail => {
+    const imageUrl = thumbnail.getAttribute('src');
+    const image = new Image();
+    image.src = imageUrl;
+  });
+  
+</script>
+</body>
+</html>

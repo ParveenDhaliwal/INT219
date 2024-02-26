@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Event Listener</title>
+    </head>
+    <body>
+        <button id="btn">Click </button>
+        <p id="demo"></p>
+        <script>
+            let c=document.getElementById("btn");
+            c.addEventListener("click", fun);
+            function fun(){
+                c.style.backgroundColor="blue";
+                // document.body.style.backgroundColor="green";
+            }
+            c.addEventListener("click", ()=>{
+                document.getElementById("demo").innerHTML = "Text --";
+            });
+             c.removeEventListener('click',fun);
+        </script>
+    </body>
+</html>

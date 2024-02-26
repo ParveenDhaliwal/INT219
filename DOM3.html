@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <p class="one">Hi</p>
+    <p class="one">Hello</p>
+    <p class="two">How are you?</p>
+    <p id="demo"></p>
+    <script>
+        const a=document.querySelectorAll("p.one");
+        document.write(a.length);
+        document.querySelector("#demo").innerHTML=a[1].innerHTML;
+       // document.getElementById("demo").innerHTML=
+    </script> -->
+
+
+    <!-- <input type="number" name="num1" id="n1">
+    <input type="number" name="num2" id="n2">
+    <button id="n3" onclick="add()">Add</button>
+    <script>
+        
+        function add(){
+            var a= document.getElementById("n1").value;
+            var b= document.getElementById("n2").value;
+            if(a==""||b==""){
+                alert("No entry");
+            }
+            else{
+            let c= Number(a)+Number(b);
+            alert(c);
+            }
+        }
+    </script> -->
+    <h2>Query Selector</h2>
+    <p class="one" id="intro">Hello How are you?</p>
+    <p class="one" id="demo">Welcome</p>
+    <p class="two" >Hello World</p>
+    <img id="ankit" src="DOM Dynamo Dive.png" alt="No image" height="200px" width="100px">
+    <script>
+
+        const image=document.querySelector("#ankit");
+        image.style.backgroundImage="WhatsApp Image 2024-02-03 at 10.56.48 AM (1).jpeg";
+        let ele=document.getElementById("ankit");
+        ele.src="WhatsApp Image 2024-02-03 at 10.56.48 AM (1).jpeg";
+
+        // const c= document.querySelectorAll("p.one");
+        // let d=c.length;
+        // document.write(d);
+        // const a=document.getElementById("intro");
+        // document.getElementById("demo").innerHTML="I get"+a.innerHTML;
+        // const b=document.getElementsByTagName("p");
+        // for(let i=0;i<b.length;i++){
+        //     document.write(b[i]);
+        // }
+    </script>
+
+</body>
+</html>

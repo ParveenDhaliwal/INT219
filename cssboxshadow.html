@@ -1,0 +1,103 @@
+<!DOCTYPE html>   
+<html>   
+    <head>   
+        <title>CSS box-shadow Property</title>   
+        
+        <style>   
+            div  
+            {  
+            border: 1px solid;   
+            padding: 10px;   
+            }  
+            #hvb   
+            {   
+                /* box-shadow: h-offset v-offset blur */   
+                box-shadow: 5px 10px 10px;   
+            }   
+            #spr  
+            {  
+                /* box-shadow: h-offset v-offset blur spread */  
+                box-shadow: 5px 10px 10px 10px;   
+            }  
+            #col  
+            {  
+               /* box-shadow: h-offset v-offset blur spread color */   
+                box-shadow: 5px 10px 10px 10px orange;   
+            }  
+            #ins  
+            {  
+                  /* box-shadow: h-offset v-offset blur spread color inset */   
+                box-shadow: 5px 10px 10px 10px orange inset;   
+            }  
+            #init  
+            {  
+                  /* box-shadow: initial */   
+               box-shadow: initial;  
+              
+            }  
+            #non  
+            {                
+                /* box-shadow: none */   
+                box-shadow: none;  
+            }  
+            p.simple{  
+                text-shadow: 3px 3px red;  
+            }  
+            p.fuzzy{  
+                text-shadow: 3px 3px 3px violet;  
+                font-size:30px;  
+                text-align:center;  
+             }  
+             p.multi{  
+                text-shadow: -3px -3px 3px blue, 3px 3px 3px red;  
+                font-size:30px;  
+                text-align:center;  
+            }  
+            .multi{  
+                /* Glow Effect */
+                text-shadow: 0 0 .1em cyan;  
+                background-color: black;  
+                font-size:50px;  
+            text-align:center;  
+            }  
+        </style>   
+    </head>   
+        
+    <body>   
+        <div id = "hvb">   
+            <h1>It is a shadow box that has h-offset, v-offset and blur attributes.</h1>   
+       </div>  
+<br><br>   
+        <div id = "spr">   
+            <h1>It is a box that includes the spread attribute.</h1>  
+        </div>   
+<br><br>   
+        <div id = "col">   
+        <h1>It is a box that includes the color attribute.</h1>  
+     </div>   
+<br><br>   
+     <div id = "ins">   
+      <h1>It is a box that includes the inset attribute.</h1>  
+   </div>   
+<br><br>   
+   <div id = "init">   
+      <h1>It is a box that includes the initial attribute.</h1>  
+   </div>   
+<br><br>  
+   <div id = "non">   
+      <h1>It is a box that includes the default attribute i.e. none.</h1>  
+  </div>   
+  <p class="simple">   
+    Simple Shadow  
+  </p>   
+  <p class="fuzzy">   
+    Fuzzy Shadow  
+    </p>   
+    <p class="multi">   
+        Multiple Shadows  
+        </p>  
+        <div class="multi">   
+            Glow Effect  
+            </div>   
+    </body>   
+</html>  
